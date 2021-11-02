@@ -1,0 +1,17 @@
+
+
+
+/* to generate the homogeneous_graph of simplified ocr data*/
+LOAD CSV WITH HEADERS FROM 'file:///SimplifiedOcrData.csv' AS row with row where row.person1 is not null
+Merge (n:person1{person1:row.person1})
+Merge (m:person2{person2:row.person2})
+Merge (n)-[r:Found_in]->(m)
+return n,m
+
+
+/* to generate the homogeneous_graph of simplified original data*/
+LOAD CSV WITH HEADERS FROM 'file:///SimplifiedOriginalData.csv' AS row with row where row.person1 is not null
+Merge (n:person1{person1:row.person1})
+Merge (m:person2{person2:row.person2})
+Merge (n)-[r:Found_in]->(m)
+return n,m
