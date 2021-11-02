@@ -1,4 +1,4 @@
-# relationshib_among_persons_from_newspaper_database_NYPL
+# Historic documents to discover noteworthy people
 
 
 **Objective**:
