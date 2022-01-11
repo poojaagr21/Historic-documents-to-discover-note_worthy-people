@@ -1,0 +1,45 @@
+Python script:
+ This script can be used to generate the the following updated information at any time:
+
+Input :
+original_csv( generated from java program) contains document name and person name
+ ocr_csv ( generated from java program) contains document name and person name)
+
+Output
+ocr list: all the names appear in ocr list in sorted order
+common names: all the names which appear in both ocr and original
+names in ocr: all the names which are only present in ocr but not in original
+names in orig: all the names which are only present in orig but not in ocr
+
+steps taken to generate the output
+fetch all the persons name from the file
+dropped the duplicates
+in original there were names with trailing spaces so removed trailing spaces from all the names
+used rstrip, lstrip, strip functions
+Consider A as ocr and B as original
+now with two cleaned data list i.e. ocr , original , performed (orig intersection ocr) A ∩ B to find the common names present in both
+performed  ( A-(A ∩ B) )set function to find the names only present in ocr list
+performed  ( B-(A ∩ B) )set function to find the names only present in orig list
+
+
+
+
+
+
+Results Numbers
+
+Total unique names in original data: 775
+Total unique names in ocr data : 732
+Total number of common unique names in ocr and original : 169
+Number of name in ocr wich are not present in original 
+
+
+Excel file link
+
+https://docs.google.com/spreadsheets/d/14_oWipqsqbxNcJb4hWwKfNC6H5Ln0MpgQJM75o9KT60/edit#gid=2012121216
+
+
+Python script Link
+
+https://colab.research.google.com/drive/1T681QdLbtJg4x-6W5W6TIzHPvBZql78V
+
